@@ -9,6 +9,7 @@ import java.awt.event.WindowAdapter;
 import javax.swing.JOptionPane;
 
 import common.MainView;
+import game.game;
 
 public class StartController extends WindowAdapter implements ActionListener, KeyListener {
 
@@ -58,7 +59,8 @@ public class StartController extends WindowAdapter implements ActionListener, Ke
 				break;
 			}
 			if(cursorFlag==1) {
-				JOptionPane.showMessageDialog(sv, "이어하기");
+				sv.dispose();
+				new game();
 				break;
 			}
 			if(cursorFlag==2) {
@@ -90,7 +92,8 @@ public class StartController extends WindowAdapter implements ActionListener, Ke
 			return;
 		}
 		if(e.getSource() == sv.getLoadGame()) {
-			JOptionPane.showMessageDialog(sv, "이어하기");
+			sv.dispose();
+			new game();
 			return;
 		}
 		if(e.getSource() == sv.getExitGame()) {

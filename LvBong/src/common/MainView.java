@@ -10,6 +10,7 @@ import java.awt.Toolkit;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -31,7 +32,6 @@ public class MainView extends JFrame{
 		
 		mainTa = new JTextArea("");
 		stat1 = new JTextArea("stat", 3, 2);
-//		stat2= new JTextArea();
 		mainTf = new JTextField();
 		mainTa.setBorder(new TitledBorder("상태"));
 		mainTf.setBorder(new TitledBorder("입력"));
@@ -48,11 +48,12 @@ public class MainView extends JFrame{
 		int f_xpos = (int) (screen.getWidth() / 2 - f_width / 2);
 		int f_ypos = (int) (screen.getHeight() / 2 - f_height / 2)-50;
 		
-		Panel nn=new Panel(new GridLayout(1, 2));
-		Panel north = new imagePanel();
+		JPanel nn=new JPanel(new GridLayout(1, 2));
+//		JPanel north = new imagePanel();
+//		JPanel north = new game.game()
 		
 		nn.add(stat1);
-		nn.add(north);
+//		nn.add(north);
 //		nn.add(stat2);
 //		north.add(tempImg);
 		
