@@ -32,6 +32,8 @@ public class MainView extends JFrame{
 		
 		mainTa = new JTextArea("");
 		stat1 = new JTextArea("stat", 3, 2);
+		stat2 = new JTextArea("stat", 3, 2);
+		
 		mainTf = new JTextField();
 		mainTa.setBorder(new TitledBorder("상태"));
 		mainTf.setBorder(new TitledBorder("입력"));
@@ -53,9 +55,7 @@ public class MainView extends JFrame{
 //		JPanel north = new game.game()
 		
 		nn.add(stat1);
-//		nn.add(north);
-//		nn.add(stat2);
-//		north.add(tempImg);
+		nn.add(stat2);
 		
 		add("North", nn);
 		add("Center", mainSp);
